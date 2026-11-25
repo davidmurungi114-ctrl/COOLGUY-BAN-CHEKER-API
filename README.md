@@ -1,33 +1,36 @@
 <div align="center">
 
-# <span style="color:#25D366;">PROFESSOR COOLGUY TECH WRLD</span>
-# <span style="color:#25D366;">WhatsApp Ban Checker</span>
+# PROFESSOR COOLGUY TECH WRLD
+# WhatsApp Ban Checker
 
-<img src="https://files.catbox.moe/fz2wom.jpg" width="230" style="border-radius:50%; border:3px solid #25D366;" alt="PROFESSOR COOLGUY" />
+<img src="https://files.catbox.moe/fz2wom.jpg" width="230" alt="PROFESSOR COOLGUY" />
 
-### <span style="color:#25D366;">● LIVE · API CONNECTED</span>
+![LIVE](https://img.shields.io/badge/%E2%97%8F_LIVE-API_CONNECTED-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)
+![PROFESSOR COOLGUY](https://img.shields.io/badge/PROFESSOR_COOLGUY-TECH_WRLD-25D366?style=for-the-badge)
 
-<br>
+<br><br>
 
-[[Open Live Checker](https://img.shields.io/badge/OPEN_LIVE_CHECKER-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://davidmurungi114-ctrl.github.io/COOLGUY-NAN-CHEKER-API/)
-[[Official Channel](https://img.shields.io/badge/OFFICIAL_CHANNEL-0088cc?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/PROFESSORCOOLGUY)
-[[Owner](https://img.shields.io/badge/OWNER-PROFESSOR_COOLGUY-black?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/PROFESSORCOOLGUY)
+[![OPEN LIVE CHECKER](https://img.shields.io/badge/OPEN_LIVE_CHECKER-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://davidmurungi114-ctrl.github.io/COOLGUY-NAN-CHEKER-API/)
+[![OFFICIAL CHANNEL](https://img.shields.io/badge/OFFICIAL_CHANNEL-0088cc?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/PROFESSORCOOLGUY)
+[![OWNER](https://img.shields.io/badge/OWNER-PROFESSOR_COOLGUY-black?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/PROFESSORCOOLGUY)
 
 </div>
 
 ---
 
-This repository contains the GitHub Pages frontend and documentation for the existing hosted status API. Browser requests use a proxy because the upstream API does not accept browser CORS preflight requests.
-
-- Upstream: `https://wastatus-8mg57tmn.manus.space/v1/status`
-- Browser proxy: configured to forward to the upstream URL
+This repository contains the GitHub Pages frontend and documentation for the hosted status API. Browser requests use a proxy because the upstream API does not accept browser CORS preflight requests.
 
 The site prefills `+256753984038` as an example but sends no request on load. A lookup is sent only after a visitor presses **CHECK STATUS**. The page renders all returned fields, unknown/null values and errors, and preserves raw JSON.
 
-## Request
+## What it does
+- Check WhatsApp number status
+- Shows ban info, validation, formatting
+- Shows appeal eligibility and timestamps
+- Shows full API response, no guessed fields
 
-Send an international number you own or are authorized to check:
+## Validation
 
-```http
-POST https://wastatus-8mg57tmn.manus.space/v1/status
-Content-Type: application/json
+A missing `number` was observed as HTTP `422`:
+
+```json
+{"ok":false,"error":{"code":"missing_number","message":"Provide an international phone number with its country calling code."}}
