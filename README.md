@@ -1,7 +1,6 @@
 <div align="center">
 
-# PROFESSOR COOLGUY TECH WRLD
-# WhatsApp Ban Checker
+![PROFESSOR COOLGUY TECH WRLD](https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=32&pause=1000&color=25D366&center=true&vCenter=true&width=600&lines=PROFESSOR+COOLGUY+TECH+WRLD;WhatsApp+Ban+Checker)
 
 <img src="https://files.catbox.moe/fz2wom.jpg" width="230" alt="PROFESSOR COOLGUY" />
 
@@ -20,7 +19,7 @@
 
 This repository contains the GitHub Pages frontend and documentation for the hosted status API. Browser requests use a proxy because the upstream API does not accept browser CORS preflight requests.
 
-The site prefills `+256753984038` as an example but sends no request on load. A lookup is sent only after a visitor presses **CHECK STATUS**. The page renders all returned fields, unknown/null values and errors, and preserves raw JSON.
+The site prefills `+256753984038` as an example but sends no request on load. A lookup is sent only after a visitor presses **CHECK STATUS**.
 
 ## What it does
 - Check WhatsApp number status
